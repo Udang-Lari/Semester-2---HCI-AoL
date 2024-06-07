@@ -1,0 +1,533 @@
+/* Google Fonts - Nunito, Pacifico, and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body
+{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container
+{
+    height: 100vh;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+    z-index: 1; 
+}
+
+header .navbar
+{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .menu-links
+{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar a
+{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover
+{
+    color: #c91245;
+}
+
+.navbar .navbar-menu.active
+{
+    color: #c91245;
+    font-size: larger;
+    font-weight: 800;
+}
+
+.hero-section
+{
+    background: url(Images/V\ Kellogg\ Home\ BG.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content
+{
+    color: #DC143C;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .content h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    max-width: 1200px;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(50, 50, 50, 0.4);
+}
+
+.hero-section .content span
+{
+    font-family: Pacifico;
+    font-weight: 500;
+    animation: color-alternate 10s infinite;
+}
+
+@keyframes color-alternate
+{
+    0%
+    {
+        color: #4169E1;
+    }
+    25%
+    {
+        color: #c91245;
+    }
+    50%
+    {
+        color: #228B22;
+    }
+    75%
+    {
+        color: #FF7F50;
+    }
+    100%
+    {
+        color: #6A0DAD;
+    }
+    100%
+    {
+        color: #4169E1;
+    }
+}
+
+.hero-section .content button
+{
+    background: #c91245;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 70px;
+    padding: 10px 23px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hero-section .content button:hover
+{
+    background: #8B0A1A;
+}
+
+#menu-button
+{
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-button:hover
+{
+    color: #c91245;
+}
+
+#close-menu-button
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+
+#close-menu-button:hover
+{
+    color: #c91245;
+}
+
+@media screen and (max-width: 768px)
+{
+    header.show-mobile-menu::before
+    {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    #menu-button, #close-menu-button
+    {
+        display: block;
+    }
+    .navbar .menu-links
+    {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links
+    {
+        left: 0;
+    }
+
+    .navbar a
+    {
+        color: #000;
+    }
+}
+
+section .container
+{
+    flex:1;
+}
+
+.best-seller
+{
+    background-color: #c91245;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.best-seller .content
+{
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.best-seller .content h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 550;
+    max-width: 1200px;
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.best-seller .content h1 + p::before
+{
+    content: "";
+    display: block;
+    border-top: 1px solid #fff;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.best-seller .content p
+{
+    font-family: Poppins, sans-serif;
+    font-size: rem;
+    max-width: 1200px;
+}
+
+.best-seller .content .cereals
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left space-around;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.best-seller .content .cereals .row
+{
+    position: relative;
+    transition: all .4s;
+}
+
+.best-seller .content .cereals .row img
+{
+    transition: all .4s;
+    border-radius: 10px;
+}
+
+.best-seller .content .cereals .row img:hover
+{
+    transform: scale(.9);
+}
+
+.best-seller .content h2
+{
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.best-seller .content h2 + p::before
+{
+    content: "";
+    display: block;
+    border-top: 1px solid #fff;
+    max-width: 1300px;
+    margin-bottom: 30px;
+}
+
+.best-seller .content span
+{
+    color: #FFD700;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.best-recipe
+{
+    background-color: #fff;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 100px
+}
+
+.best-recipe .content
+{
+    color: #000;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.best-recipe .content h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 550;
+    max-width: 1200px;
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.best-recipe .content h1 + p::before
+{
+    content: "";
+    display: block;
+    border-top: 1px solid #ccc;
+    max-width: 1200px;
+}
+
+.best-recipe .content p
+{
+    color: #fff; /* ignore */
+}
+
+.best-recipe .content .recipes
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.best-recipe .recipes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.best-recipe .recipes p
+{
+    color: #000;
+    font-weight: 600;
+}
+
+.best-recipe .row 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 250px;
+}
+
+.best-recipe .row img 
+{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.best-recipe .row button
+{
+    background-color: #c91245;
+    color: #fff;
+    font-size: 1.01rem;
+    font-weight: 500;
+    margin-top: 10px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.best-recipe .row button:hover
+{
+    background-color: #8B0A1A;
+}
+
+.best-recipe .brand img
+{
+    width: 700px;
+
+    margin-top: 90px;
+}
+
+.footer
+{
+    height: 30vh;
+    background-color:#c91245;
+}
+
+.footer .content
+{
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 25vh;
+
+    list-style-type: none;
+}
+
+.footer .content h1
+{
+    font-family: Pacifico;
+    font-size: 3rem;
+    font-weight: 500;
+
+    max-width: 300px;
+
+    margin-left: 100px;
+}
+
+.footer .content span
+{
+    font-family: Pacifico;
+    font-size: 3rem;
+    font-weight: 500;
+
+    text-decoration: underline;
+}
+
+.footer .content .links 
+{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100px;
+
+    margin-top: -70px;
+    margin-left: 40vw;
+}
+
+.footer .content .links a
+{
+    font-family: Nunito, sans-serif;
+    font-size: larger;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .content .links a:hover
+{
+    text-decoration: underline;
+}
+
+.footer .content .socials
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+    max-width: 350px;
+    position: relative;
+
+    margin-left: 60vw;
+    margin-top: -14vh;
+}
+
+.footer .content .socials img
+{
+    max-height: 50px;
+    max-width: 50px;
+}

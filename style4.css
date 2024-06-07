@@ -1,0 +1,351 @@
+/* Google Fonts - Nunito, Pacifico, and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body
+{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+    z-index: 1; 
+}
+
+header .navbar
+{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .menu-links
+{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar a
+{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover
+{
+    color: #c91245;
+}
+
+.navbar .navbar-menu.active
+{
+    color: #c91245;
+    font-size: larger;
+    font-weight: 800;
+}
+
+#menu-button
+{
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-button:hover
+{
+    color: #c91245;
+}
+
+#close-menu-button
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+
+#close-menu-button:hover
+{
+    color: #c91245;
+}
+
+@media screen and (max-width: 768px)
+{
+    header.show-mobile-menu::before
+    {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    #menu-button, #close-menu-button
+    {
+        display: block;
+    }
+    .navbar .menu-links
+    {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links
+    {
+        left: 0;
+    }
+
+    .navbar a
+    {
+        color: #000;
+    }
+}
+
+.spacer
+{
+    color: #fff;
+    margin-top: 5vh;
+}
+
+.footer
+{
+    height: 30vh;
+    background-color:#c91245;
+}
+
+.footer .content
+{
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 25vh;
+
+    list-style-type: none;
+}
+
+.footer .content h1
+{
+    font-family: Pacifico;
+    font-size: 3rem;
+    font-weight: 500;
+
+    max-width: 300px;
+
+    margin-left: 100px;
+}
+
+.footer .content span
+{
+    font-family: Pacifico;
+    font-size: 3rem;
+    font-weight: 500;
+
+    text-decoration: underline;
+}
+
+.footer .content .links 
+{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100px;
+
+    margin-top: -70px;
+    margin-left: 40vw;
+}
+
+.footer .content .links a
+{
+    font-family: Nunito, sans-serif;
+    font-size: larger;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .content .links a:hover
+{
+    text-decoration: underline;
+}
+
+.footer .content .socials
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+    max-width: 350px;
+    position: relative;
+
+    margin-left: 60vw;
+    margin-top: -14vh;
+}
+
+.footer .content .socials img
+{
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.secondtainer
+{
+    height: fit-content;
+    width: 100%;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+}
+
+.secondtainer .content
+{
+    width: 1200px;
+}
+.secondtainer .content .banner
+{
+    width: 1200px;
+    height: 500px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+.secondtainer .content .banner img
+{
+    width: 1200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.secondtainer .content .title
+{
+    display: flex;
+    justify-content: center;
+
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.secondtainer .content .title h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.secondtainer .content .title span
+{
+    font-family: Pacifico;
+    font-size: 4rem;
+    font-weight: 600;
+
+    color: #c91245;
+}
+
+.secondtainer .content hr
+{
+    background-color: #ccc;
+}
+
+.secondtainer .content .history
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondtainer .content .history img
+{
+    width: 800px;
+
+    margin: 40px;
+}
+
+.secondtainer .content .history h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+
+    text-align: justify;
+}
+
+.secondtainer .content .title-2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.secondtainer .content .title-2 h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.secondtainer .content .mission
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.secondtainer .content .mission h1
+{
+    font-family: Poppins, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
